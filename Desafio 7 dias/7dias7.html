@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>7 days of code</title>
+			<div>
+				<h2>Calculadora Javascript</h2>
+				<p>Digite o valor a:</p>
+				<input id="a" name="a" value="" type="number">
+				<p>Digite o valor b:</p>
+				<input id="b" name="b" value="" type="number">
+				<p>Selecione a operação:</p>
+				<button onclick="soma()">Soma a+b</button>
+				<button onclick="subtracao()">Subtração a-b</button>
+				<button onclick="divisao()">Divisão a/b</button>
+				<button onclick="multiplicacao()">Multipilicação a*b</button>
+				<button onclick="sair()">Sair</button>
+				<p>Resultado da operação:</p>
+				<output name="result">0</output>
+			</div>
+	<script type="text/javascript">
+		var resultado = document.querySelector('output');
+		
+		function soma(){
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			var resultadoSoma = a + b;
+			resultado.textContent = resultadoSoma;
+		}
+		
+		function subtracao(){
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			var resultadoSubtracao = a - b;
+			resultado.textContent = resultadoSubtracao;
+		}
+
+		function divisao(){
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			var resultadoDivisao = a / b;
+			resultado.textContent = resultadoDivisao;
+		}
+		
+		function multiplicacao(){
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
+			var resultadoSoma = a + b;
+			resultado.textContent = resultadoSoma;
+		}
+		
+		function sair(){
+			var sair = document.querySelector('div');
+			sair.textContent = "Até a próxima!";
+		}
+	</script>
+ </head>
+</html>

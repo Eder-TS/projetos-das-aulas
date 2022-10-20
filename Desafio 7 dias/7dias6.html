@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>7 days of code</title>
+
+   <script type="text/javascript">
+		var comida = "sim";
+		var frutas = [];
+		var laticinios =[];
+		var congelados = [];
+		var doces = [];
+		var lista = [];
+		lista.push(frutas,laticinios,congelados,doces);
+		
+		while (comida == "sim"){
+			gostariaComida();
+			if (comida == "sim"){
+				var qualComida = prompt("Qual comida gostaria de adicionar?");
+				var qualCategoria = prompt("Esta comida é: frutas, laticínios, congelados ou doces?");
+				if (qualCategoria == "frutas"){
+					frutas.push(qualComida);
+				}else if (qualCategoria == "laticínios"){
+					laticinios.push(qualComida);
+				}else if (qualCategoria == "congelados"){
+					congelados.push(qualComida);
+				}else if (qualCategoria == "doces"){
+					doces.push(qualComida);
+				}else{
+					alert("Esta categoria não foi predefinida.");
+				}
+			}
+		}
+		
+		function gostariaComida(){
+			comida = prompt("Gostaria de adicionar uma comida a sua lista de compras?\nDigite sim para adicionar ou digite remover para remover algum item.\nDigite não ou pressione cancelar para sair do aplicativo");
+			if (comida !== "sim" && comida !== "não"){
+				if (comida == "remover"){
+					removerItem();
+				}
+			}else{
+				return;
+			}
+		}
+		
+		function removerItem(){
+			if (frutas.length == 0 && laticinios.length == 0 && congelados.length == 0 && doces.length == 0){
+				alert("Não há itens para remover, a lista está vazia.");
+				comida = "sim";
+				gostariaComida();
+				return;
+			}
+			alert("Qual item gostaria de remover?");
+			let qualRemover = prompt("Lista de compras\nFrutas: "+frutas+"\nLaticínios: "+laticinios+"\nCongelados: "+congelados+"\nDoces: "+doces);
+			for (let i=0; i<lista.length; i++){
+				var remover = lista[i].includes(qualRemover);
+				if (remover == true){
+					let indiceRemover = lista[i].indexOf(qualRemover);
+					let removido = lista[i].splice(indiceRemover,1);
+					alert("O item "+removido+" foi removido.");
+					alert("Lista de compras\nFrutas: "+frutas+"\nLaticínios: "+laticinios+"\nCongelados: "+congelados+"\nDoces: "+doces);
+					comida = "sim";
+					gostariaComida();
+					break;
+				}
+			}
+			if (remover == false){
+				alert("Item inexistente.");
+				gostariaComida();
+			}
+		}
+		
+		alert("Lista de compras\nFrutas: "+frutas+"\nLaticínios: "+laticinios+"\nCongelados: "+congelados+"\nDoces: "+doces);
+	</script>
+ </head>
+</html>

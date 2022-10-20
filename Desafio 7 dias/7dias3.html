@@ -1,0 +1,48 @@
+<html>
+
+   <title>7 days of code</title>
+
+   <script type="text/javascript">
+		alert("Bem vindo ao jogo do caminho de aprendizado!");
+		
+        var area_de_estudo = prompt("Em qual área pretende atuar? Digite 1 para Front-End ou 2 para Back-End.");
+	
+		if(area_de_estudo == 1){
+			var front = prompt("Pretende estudar React (responda 1) ou Vue (responda 2).");
+		}
+		else if(area_de_estudo == 2){
+			var back = prompt("Pretende estudar C# (responda 1) ou Java (responda 2).");
+		}
+		else{
+			alert("Digite um valor válido.");
+		}
+	
+		var fullStack = prompt("Pretende se especialiar dentro da sua área (responda 1) ou quer se tornar desenvolvedor Fullstack (responda 2)?");
+		
+		if (fullStack == 1 && area_de_estudo == 1){
+			alert("O desenvolvedor Front-end atua diretamente na experiência do usuário com a aplicação!");
+		}
+		else if(fullStack == 2 && area_de_estudo == 1 || fullStack == 2 && area_de_estudo == 2){
+		    alert("O desenvolvedor Fullstack atua desde o desenvolvimento da aplicação na máquina até a interação da aplicação com o usuário.");
+		}
+		else if(fullStack == 1 && area_de_estudo == 2){
+			alert("O desenvolvedor Back-End trabalha com tudo que acontece nas máquinas para que as aplicãoes funcionem!");
+		}
+		else{
+		    alert("Digite um valor válido.");
+		}
+		
+		var mais = prompt("Tem mais alguma tecnologia que gostaria de estudar? Digite Sim em caso afirmativo!");
+		
+		if (mais ==="Sim"){
+			while (mais === "Sim"){
+				let qual = prompt("Qual tecnologia?");
+				alert(qual+" é muito legal!");
+				mais = prompt("Tem mais alguma tecnologia que gostaria de estudar? Digite Sim em caso afirmativo!");
+			}
+		}else{
+			alert("Digite um valor válido!");
+		}
+	</script>
+	<p> Tenha muito sucesso na sua carreira!</p>
+</html>

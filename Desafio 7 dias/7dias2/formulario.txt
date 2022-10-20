@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Curso JavaScript Progressivo</title>
+   <input id="textinput" name="textinput" value="" type="text">
+   <button onclick="enviar()">Confirmar</button>
+
+   <script type="text/javascript">
+    function enviar(){
+        var valor = document.getElementById("textinput").value;
+        alert("Você digitou: " + valor);
+    }
+   </script>
+
+ </head>
+</html>

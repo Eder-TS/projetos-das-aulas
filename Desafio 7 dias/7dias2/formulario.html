@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>7 days of code</title>
+   <p>Qual seu nome?
+   <input id="qual_nome" name="qual_nome" value="" type="text">
+   </p>
+   <p>Quantos anos você tem?
+   <input id="qual_idade" name="qual_idade" value="" type="text">
+   </p>
+   <p>Qual linguagem de programação você está estudando?
+   <input id="qual_linguagem" name="qual_linguagem" value="" type="text">
+   </p>
+   <button onclick="enviar()">Confirmar</button>
+
+   <script type="text/javascript">
+    function enviar(){
+        var nome = document.getElementById("qual_nome").value;
+		var idade = document.getElementById("qual_idade").value;
+		var linguagem = document.getElementById("qual_linguagem").value;
+		
+        alert("Olá " + nome +", você tem " + idade +" anos de idade e já está aprendendo " + linguagem +"!");
+    }
+   </script>
+
+ </head>
+</html>

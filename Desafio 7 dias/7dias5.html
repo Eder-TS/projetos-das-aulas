@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>7 days of code</title>
+
+   <script type="text/javascript">
+		var comida = "sim";
+		var frutas = [];
+		var laticinios =[];
+		var congelados = [];
+		var doces = [];
+		
+		while (comida == "sim"){
+			comida = prompt("Gostaria de adicionar uma comida a sua lista de compras?");
+			if (comida !== "sim"){
+				alert("Lista de compras\nFrutas: "+frutas+"\nLaticínios: "+laticinios+"\nCongelados: "+congelados+"\nDoces: "+doces);
+				break;
+			}
+			var qualComida = prompt("Qual comida gostaria de adicionar?");
+			var qualCategoria = prompt("Esta comida é: frutas, laticínios, congelados ou doces?");
+			if (qualCategoria == "frutas"){
+				frutas.push(qualComida);
+			}else if (qualCategoria == "laticínios"){
+				laticinios.push(qualComida);
+			}else if (qualCategoria == "congelados"){
+				congelados.push(qualComida);
+			}else if (qualCategoria == "doces"){
+				doces.push(qualComida);
+			}else{
+				alert("Esta categoria não foi predefinida.");
+			}
+		}
+	</script>
+ </head>
+</html>

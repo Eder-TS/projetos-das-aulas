@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>7 days of code</title>
+		<script>
+			var inteiro;
+			var tentativas = 0;			
+			
+			var numeroAleatorio = Math.floor(Math.random() * (11 - 0) + 0);
+			console.log(numeroAleatorio);
+
+			var escolha = prompt("Bem vindo ao jogo de adivinhação. Tente adivinhar o número inteiro entre 0 e 10 que o jogo irá escolher.");
+			
+			trataNumero(escolha);
+			function trataNumero(x){
+				errado = isNaN(escolha);
+				while (errado == true || escolha < 0 || escolha > 10){
+					alert("Digite um valor válido.");
+					escolha = prompt("Tente adivinhar o número inteiro entre 0 e 10 que o jogo irá escolher.");
+					errado = isNaN(escolha);
+				}
+			}
+			
+			gabarito(escolha);
+			function gabarito(x){
+				if (numeroAleatorio == escolha){
+					alert("Parabéns! Você adivinhou o número!");
+					tentativas = 3;
+				}else{
+					while (tentativas < 2){
+						escolha = prompt("Você errou e terá mais uma chance.");
+						trataNumero(escolha);
+						tentativas++;
+						gabarito(escolha);
+					}
+					if (tentativas == 2){
+						alert("Infelizmente suas chances acabaram! O valor que o jogo escolheu foi "+ numeroAleatorio +". Recarregue a página para reiniciar o jogo.");
+						tentativas = 3;
+					}
+				}
+			}
+		</script>
+		<p>Jogo de adivinhação. Recarregue a página para reiniciar.</p>
+	</head>
+</html>
