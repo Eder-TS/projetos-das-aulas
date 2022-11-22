@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Micheli
+ *
+ */
+module gerenciadorDeCursos {
+}
