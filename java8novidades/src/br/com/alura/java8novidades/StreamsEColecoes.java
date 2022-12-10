@@ -53,7 +53,7 @@ public class StreamsEColecoes {
 		//Aqui, a API sugerida é a Classe Optional, que lida bem com null (desde que eu implemente os métodos)
 		Optional<Curso> qualquerCurso = cursos.stream().filter(c -> c.getAlunos() >= 1000).findAny();
 		qualquerCurso.ifPresent(c -> System.out.println(c.getNome()));
-		//qualquerCurso pode ter retornado nulo, ifPresente verifica a exitência e executa o método ou
+		//qualquerCurso pode ter retornado nulo, ifPresent verifica a exitência e executa o método ou
 		//não faz nada se for nulo. 
 		//Abaixo também é válido:
 		cursos.stream().filter(c -> c.getAlunos() >= 100)

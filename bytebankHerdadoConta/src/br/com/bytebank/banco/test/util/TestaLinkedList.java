@@ -9,7 +9,7 @@ import br.com.bytebank.banco.modelo.ContaPoupanca;
 public class TestaLinkedList {
 
 	public static void main(String[] args) {
-		//aqui o LinkedList se encaiza do mesmo jeito que o ArrayList
+		//aqui o LinkedList se encaixa do mesmo jeito que o ArrayList
 		//o código é o mesmo que está na classe de teste TesteArrayList
 		//porém estas duas classes/funcionalidades (ArrayList e LinkedList) tem
 		//alguma diferença de desempenho em algumas situações

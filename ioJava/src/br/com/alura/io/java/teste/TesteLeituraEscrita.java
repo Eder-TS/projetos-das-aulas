@@ -64,5 +64,6 @@ public class TesteLeituraEscrita {
 		Socket s = new Socket();//pacote java.net
 		//o restante ficaria igual com o InputStream
 		//Para escrever na rede bastaria usar o OutputStream, com buffer e writer
+		s.close();
 	}
 }

@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Esta classe representa a moldura da conta
  * 
- * @author Eer TS
+ * @author Eder TS
  *
  *         Este tipo de comentário serve para qualquer membro público do código
  *         pois, se alguém for usar esta classe em outro projeto terá uma
