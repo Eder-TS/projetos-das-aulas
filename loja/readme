@@ -1,0 +1,3 @@
+Na implementação deste projeto foram abordados os design patterns comportamentais Strategy, Chain of Responsibility, 
+Template Method, Command, Observer e State.
+Depois foram aplicados os patterns estruturais Adapter, Decorator, Composite, Facade e Proxy.

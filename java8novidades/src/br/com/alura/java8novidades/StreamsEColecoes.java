@@ -1,14 +1,13 @@
 package br.com.alura.java8novidades;
 
+import static java.util.Comparator.comparing;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalDouble;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.util.Comparator.*;
 public class StreamsEColecoes {
 
 	public static void main(String[] args) {

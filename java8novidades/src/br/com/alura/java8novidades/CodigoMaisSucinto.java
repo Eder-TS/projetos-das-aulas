@@ -1,8 +1,10 @@
 package br.com.alura.java8novidades;
 
+//para declarar method reference ainda mais enxuto
+import static java.util.Comparator.comparing;
+
 import java.util.ArrayList;
 import java.util.Comparator;
-import static java.util.Comparator.*;//para declarar method reference ainda mais enxuto
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
